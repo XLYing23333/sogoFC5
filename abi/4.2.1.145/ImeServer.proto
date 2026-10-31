@@ -1,0 +1,37 @@
+syntax = "proto2";
+
+message SogouImeServerRetProto {
+  optional bool bInited = 1;
+  optional bool bInsertChar = 2;
+  optional string szCompStr = 3;
+  optional int32 nCursorIdx = 4;
+  optional int32 nCursorPos = 5;
+  optional string szCandResStr = 6;
+  optional bool bFullShape = 7;
+  optional bool bChineseSymbol = 8;
+  optional int32 nCandCount = 9;
+  optional int32 nFocusCandIdx = 10;
+  repeated string strCands = 11;
+  optional int32 ecFuncKey = 12;
+  optional bool bPreOutput = 13;
+  optional int32 pPixels = 14;
+  optional int32 nRowBytes = 15;
+  optional int32 nWidth = 16;
+  optional int32 nHeight = 17;
+  optional int32 nRectLeft = 18;
+  optional int32 nRectTop = 19;
+  optional int32 nRectRight = 20;
+  optional int32 nRectBottom = 21;
+  optional bool bNeedInsertChar = 22;
+  optional bool bActive = 23;
+  optional bool bChinese = 24;
+  optional bool bTradition = 25;
+  optional int32 nOutputFlg = 26;
+  optional int32 nSimulateKey = 27;
+  optional string strImeVersion = 28;
+  optional string strImeSkinPath = 29;
+  optional string strCurrentLayout = 30;
+  optional string strCellDictVersion = 31;
+  optional string strCellDictName = 32;
+  optional int32 nCellDictWordCount = 33;
+}

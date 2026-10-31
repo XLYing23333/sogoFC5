@@ -1,0 +1,15 @@
+{
+  "package": "sogoupinyin",
+  "version": "4.2.1.145",
+  "architecture": "amd64",
+  "filename": "sogoupinyin_4.2.1.145_amd64.deb",
+  "url": "https://ime-sec.gtimg.com/pc/dl/gzindex/1680521603/sogoupinyin_4.2.1.145_amd64.deb",
+  "sha256": "3111af17a6abddd80b856aa9c1f579a137d69f3d735ead936ddb6e5f08b59f3b",
+  "binaries": {
+    "usr/lib/x86_64-linux-gnu/fcitx/fcitx-sogoupinyin.so": "95c1e5f378baf1ac19ee46ab67492a1b762bffb9c6dfdeb8db5f634181e6d024",
+    "opt/sogoupinyin/files/lib/libSogouIme.so": "e821f0de7193ced47ebaa592827f85c31da861075e98817bdea0bda6828665b7",
+    "opt/sogoupinyin/files/lib/libSogouShell.so": "6fc1db35ba40e687621d138f142cf971d98d904f61e48767aef15b03ab520f50",
+    "opt/sogoupinyin/files/bin/sogoupinyin-service": "cc4125c3c890091352218be53d15d692f59b2802439d98db7eb9d1681adbbcd2",
+    "opt/sogoupinyin/files/lib/libSogouWbShell.so": "3488f903adc9c46f78b620537350c055cb7d5448166bf8229285b8964e1e0ee4"
+  }
+}

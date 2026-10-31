@@ -1,0 +1,44 @@
+syntax = "proto2";
+
+message SogouImeClientProto {
+  optional string szPathShell = 1;
+  optional string szSysDict = 2;
+  optional string szUsrDict = 3;
+  optional string szXmlPath = 4;
+  optional string szResPath = 5;
+  optional bool bShowIme = 6;
+  optional int32 nTouchFlg = 7;
+  optional int32 nTouchX = 8;
+  optional int32 nTouchY = 9;
+  optional int32 nMoveX = 10;
+  optional int32 nMoveY = 11;
+  optional int32 nInsertChar = 12;
+  optional int32 nPageSize = 13;
+  optional bool bFullShape = 14;
+  optional bool bChineseSymbol = 15;
+  optional int32 nWndId = 16;
+  optional int32 nTimerID = 17;
+  optional int32 nTopPointer = 18;
+  optional int32 nLongPressFlg = 19;
+  optional int32 nLongPressX = 20;
+  optional int32 nLongPressY = 21;
+  optional int32 nNeedInsertChar = 22;
+  optional int32 nActive = 23;
+  optional bool bChinese = 24;
+  optional bool bTradition = 25;
+  optional bool bReverse = 26;
+  optional int32 nParamIdx = 27;
+  optional int32 nParamVal = 28;
+  optional bool bSelect = 29;
+  optional string strLayout = 30;
+  optional string strSkinName = 31;
+  optional int32 nMoveFlag = 32;
+  optional int32 nCurrInputWndX = 33;
+  optional int32 nCurrInputWndY = 34;
+  optional int32 nCurrInputWndW = 35;
+  optional int32 nCurrInputWndH = 36;
+  optional int32 nCurrCursorX = 37;
+  optional int32 nCurrCursorY = 38;
+  optional int32 nCurrCursorW = 39;
+  optional int32 nCurrCursorH = 40;
+}

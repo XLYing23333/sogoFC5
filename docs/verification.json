@@ -1,0 +1,181 @@
+{
+  "project_version": "1.0.0",
+  "baseline_version": "4.2.1.145",
+  "baseline_architecture": "amd64",
+  "compiler": "GNU C++ 13.3.0",
+  "protobuf_compiler": "3.21.12",
+  "ctest": {
+    "passed": 15,
+    "failed": 0,
+    "tests": [
+      "compiler-abi-contract",
+      "descriptor-decoder",
+      "native-runtime-guards",
+      "native-keys",
+      "native-queue",
+      "native-transport",
+      "native-profile",
+      "native-presentation",
+      "native-editing",
+      "native-result_buffers",
+      "native-scheduling",
+      "native-latency",
+      "native-keypad",
+      "recovered-protocol-source",
+      "official-binary-static-contract"
+    ]
+  },
+  "static_contract": {
+    "pinned_elf_hashes": 5,
+    "shell_vtable_entries": 37,
+    "named_slots_with_caller_evidence": 27,
+    "request_fields": 40,
+    "reply_fields": 33,
+    "frontend_and_service_descriptors_byte_identical": true,
+    "fresh_extraction_analysis_byte_identical": true,
+    "core_result_buffer_query_and_native_terminator_reset_verified": true,
+    "native_keypad_environment_and_setter_verified": true
+  },
+  "vendor_code_executed": false,
+  "real_engine_conversion_verified": false,
+  "learning_data_save_verified": false,
+  "fcitx5_input_integration_implemented": true,
+  "desktop_verified": false,
+  "installable_package_produced": true,
+  "package_checks": {
+    "structure": true,
+    "hash_check_mode": true,
+    "dependency_resolution": true,
+    "full_dependency_group_relocations": true,
+    "unmodified_official_ime_and_shell": true,
+    "no_native_settings_entry": true,
+    "no_cpis": true,
+    "no_maintainer_scripts": true,
+    "no_installed_python_runtime": true,
+    "dark_and_light_assets": true,
+    "logo_original_bytes": true,
+    "inputmethod_icon_path_verified": true
+  },
+  "compatibility_boundary": {
+    "standard_bad_array_exception_semantics_tested": true,
+    "original_gui_construction_rejected": true,
+    "original_gui_available": false
+  },
+  "package_sha256": "b88903debb1c4508cf2c1170203d891ce36b81c6cf827ae30978155397f7ed93",
+  "test_environment": {
+    "distribution": "Ubuntu 24.04 amd64",
+    "fcitx5": "5.1.7",
+    "qt5": "5.15.13",
+    "vendor_process_started": false,
+    "x11_acceptance_run": false,
+    "private_dbus_acceptance_run": false,
+    "installed_or_restarted_input_method": false
+  },
+  "reproducible_deb_verified": true,
+  "runtime_input_scope": "PC pinyin layout 19; Wubi dictionaries packaged without a Wubi input method entry",
+  "native_protocol_version": 2,
+  "editing_checks": {
+    "single_candidate_number": true,
+    "candidate_text_preserved": true,
+    "page_keys_and_boundaries_with_mock_engine": true,
+    "press_only_and_paired_backspace_repeats_with_mock_engine": true,
+    "deletion_after_preedit_empty_with_mock_engine": true,
+    "release_only_queue_does_not_require_engine_editing": true,
+    "internal_repeat_flag_removed_from_application_forwarding": true,
+    "real_engine_desktop_retest_performed": false,
+    "pc_page_return_always_true_verified_statically": true,
+    "page_delta_requires_changed_candidates": true,
+    "persistent_core_result_replay_reproduced_with_mock_engine": true,
+    "partial_selection_preserves_suffix_with_mock_engine": true,
+    "partial_selection_continuation_release_paging_deletion_with_mock_engine": true,
+    "identical_text_in_distinct_selection_operations_preserved": true,
+    "core_result_query_failure_rejected": true,
+    "core_and_converted_result_reset_implemented": true
+  },
+  "limitations": [
+    "Identical visible candidate pages cannot be distinguished through snapshot comparison.",
+    "Editing and keypad behavior are covered by mocks and static checks; real engine mixed letter/digit composition requires desktop verification."
+  ],
+  "reproducibility_scope": "Two clean builds in different directories using the same compiler, SDK, Qt and packaging tools; byte-identical deb artifacts",
+  "result_buffer_checks": {
+    "core_query_vtable": "0x9fc310",
+    "query_slot": 25,
+    "query_function": "0x410d3e",
+    "native_writable_buffer_getter": "0x438f18",
+    "native_reset_write": "0x435217",
+    "clear_composition": false,
+    "text_content_deduplication": false,
+    "real_engine_executed": false
+  },
+  "performance_checks": {
+    "unchanged_preedit_and_candidates_skipped": true,
+    "commit_always_delivered_and_remaining_preedit_resent": true,
+    "context_reset_and_capability_change_invalidate_cache": true,
+    "socket_receives_are_event_driven": true,
+    "oldest_request_watchdog_not_postponed": true,
+    "absolute_maintenance_not_postponed_by_input": true,
+    "fcitx_event_loop_watchdog_tested_without_frontend": true,
+    "full_received_length_validation_tested": true,
+    "histogram_percentile_upper_bounds_tested": true,
+    "synchronous_presentation_benchmark": {
+      "events_per_round": 120000,
+      "rounds": 7,
+      "unconditional_median_us": 128256,
+      "cached_median_us": 75405,
+      "unconditional_preedit_calls": 110000,
+      "cached_preedit_calls": 60000,
+      "unconditional_candidate_updates": 120000,
+      "cached_candidate_updates": 60000,
+      "commits_per_round": 10000,
+      "desktop_rendering_measured": false,
+      "vendor_executed": false,
+      "scope": "Synchronous Fcitx5 InputContext mock calls; no real frontend, vendor conversion or drawing",
+      "synchronous_median_reduction_percent": 41.21,
+      "idle_schedule_model": {
+        "maintenance_interval_us": 1000000,
+        "wakeups_per_minute": 60,
+        "key_deadline_us": 180000,
+        "measured_process_cpu": false
+      }
+    },
+    "desktop_latency_measured": false,
+    "live_engine_profiled": false
+  },
+  "display_name": "Sogo-FC5",
+  "keypad_checks": {
+    "x11_numeric_keypad_virtual_key_mapping_tested": true,
+    "main_row_selection_keys_remain_distinct": true,
+    "composition_continuation_with_mock_engine_tested": true,
+    "numlock_release_identity_tested": true,
+    "control_alt_super_shortcuts_remain_application_keys": true,
+    "native_pad_num_as_select_disabled_and_read_back_implemented": true,
+    "real_vendor_mixed_composition_tested": false
+  },
+  "appearance_checks": {
+    "display_name": "Sogo-FC5",
+    "stable_inputmethod_identifier": "sogo-fc5-direct",
+    "dark_highlight_margin_lr_tb": [
+      6,
+      5
+    ],
+    "light_highlight_margin_lr_tb": [
+      3,
+      3
+    ],
+    "manual_palette_action_only": true,
+    "desktop_appearance_tested": false
+  },
+  "release_name": "sogo-FC5-v1.0.0",
+  "branding": {
+    "asset": "assets/SogoFC5.png",
+    "installed_path": "/usr/share/pixmaps/sogo-fc5.png",
+    "original_bytes_preserved": true,
+    "icon_path_lookup_verified_sizes": [
+      16,
+      24,
+      32
+    ],
+    "desktop_rendering_verified": false,
+    "sha256": "cbfeaeff4fe7b7ab66e19a3015e57793a80b3634d215eaaa47d812fc7f7fffa7"
+  }
+}

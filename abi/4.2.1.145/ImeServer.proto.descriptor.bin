@@ -1,0 +1,45 @@
+
+ImeServer.proto"Æ
+SogouImeServerRetProto
+bInited (
+bInsertChar (
+	szCompStr (	
+
+nCursorIdx (
+
+nCursorPos (
+szCandResStr (	
+
+bFullShape (
+bChineseSymbol (
+
+nCandCount	 (
+nFocusCandIdx
+ (
+strCands (	
+	ecFuncKey (
+
+bPreOutput (
+pPixels (
+	nRowBytes (
+nWidth (
+nHeight (
+	nRectLeft (
+nRectTop (
+
+nRectRight (
+nRectBottom (
+bNeedInsertChar (
+bActive (
+bChinese (
+
+bTradition (
+
+nOutputFlg (
+nSimulateKey (
+strImeVersion (	
+strImeSkinPath (	
+strCurrentLayout (	
+strCellDictVersion (	
+strCellDictName  (	
+nCellDictWordCount! (

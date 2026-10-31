@@ -1,0 +1,46 @@
+
+ImeClient.proto"µ
+SogouImeClientProto
+szPathShell (	
+	szSysDict (	
+	szUsrDict (	
+	szXmlPath (	
+	szResPath (	
+bShowIme (
+	nTouchFlg (
+nTouchX (
+nTouchY	 (
+nMoveX
+ (
+nMoveY (
+nInsertChar (
+	nPageSize (
+
+bFullShape (
+bChineseSymbol (
+nWndId (
+nTimerID (
+nTopPointer (
+nLongPressFlg (
+nLongPressX (
+nLongPressY (
+nNeedInsertChar (
+nActive (
+bChinese (
+
+bTradition (
+bReverse (
+	nParamIdx (
+	nParamVal (
+bSelect (
+	strLayout (	
+strSkinName (	
+	nMoveFlag  (
+nCurrInputWndX! (
+nCurrInputWndY" (
+nCurrInputWndW# (
+nCurrInputWndH$ (
+nCurrCursorX% (
+nCurrCursorY& (
+nCurrCursorW' (
+nCurrCursorH( (

@@ -1,0 +1,12 @@
+Package: sogo-fc5
+Version: 1.0.0
+Architecture: amd64
+Maintainer: Local integration <local@localhost>
+Section: non-free/utils
+Priority: optional
+Depends: fcitx5 (>= 5.1.7), libfcitx5core7, libfcitx5config6, libfcitx5utils2, fcitx5-frontend-gtk3, fcitx5-frontend-gtk4, fcitx5-frontend-qt5, fcitx5-frontend-qt6, fcitx5-config-qt, fonts-noto-cjk, libc6 (>= 2.38), libstdc++6 (>= 13.1), libgcc-s1, libqt5core5t64 (>= 5.15), libqt5gui5t64, libqt5widgets5t64, libqt5dbus5t64, libgsettings-qt1, libglib2.0-0t64, libfontconfig1, libcairo2, librsvg2-2, libdbus-1-3, libpixman-1-0, libx11-6, libxtst6, libgomp1, libasound2t64, libpulse0, libsndio7.0, libudev1, libxext6, libxcursor1, libxi6, libxfixes3, libxrandr2, libxss1, libxxf86vm1, libwayland-client0, libwayland-cursor0, libwayland-egl1, libxkbcommon0, libzstd1, zlib1g
+Description: Sogo-FC5 input method using the official Sogou FC4 engine
+ Uses the official 4.2.1.145 Sogou engine and dictionaries through
+ reconstructed binary interfaces, with native Fcitx5 composition and
+ candidate presentation. Engine processing runs in a separate process.
+ Real engine conversion and desktop behavior require manual verification.

@@ -1,0 +1,21 @@
+{
+  "events_per_round": 120000,
+  "rounds": 7,
+  "unconditional_median_us": 128256,
+  "cached_median_us": 75405,
+  "unconditional_preedit_calls": 110000,
+  "cached_preedit_calls": 60000,
+  "unconditional_candidate_updates": 120000,
+  "cached_candidate_updates": 60000,
+  "commits_per_round": 10000,
+  "desktop_rendering_measured": false,
+  "vendor_executed": false,
+  "scope": "Synchronous Fcitx5 InputContext mock calls; no real frontend, vendor conversion or drawing",
+  "synchronous_median_reduction_percent": 41.21,
+  "idle_schedule_model": {
+    "maintenance_interval_us": 1000000,
+    "wakeups_per_minute": 60,
+    "key_deadline_us": 180000,
+    "measured_process_cpu": false
+  }
+}

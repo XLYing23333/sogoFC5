@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+runtime=${XDG_RUNTIME_DIR:-/run/user/$(id -u)}
+if [ -f "$runtime/sogo-fc5-direct/status.json" ]; then
+    cat "$runtime/sogo-fc5-direct/status.json"
+else
+    printf '%s\n' 'Sogo-FC5 has no active status record. Log in again and add the input method first.' >&2
+    exit 1
+fi

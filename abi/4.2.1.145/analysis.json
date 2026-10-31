@@ -1,0 +1,2062 @@
+{
+  "schema": 1,
+  "baseline": {
+    "package": "sogoupinyin",
+    "version": "4.2.1.145",
+    "architecture": "amd64",
+    "filename": "sogoupinyin_4.2.1.145_amd64.deb",
+    "url": "https://ime-sec.gtimg.com/pc/dl/gzindex/1680521603/sogoupinyin_4.2.1.145_amd64.deb",
+    "sha256": "3111af17a6abddd80b856aa9c1f579a137d69f3d735ead936ddb6e5f08b59f3b",
+    "binaries": {
+      "usr/lib/x86_64-linux-gnu/fcitx/fcitx-sogoupinyin.so": "95c1e5f378baf1ac19ee46ab67492a1b762bffb9c6dfdeb8db5f634181e6d024",
+      "opt/sogoupinyin/files/lib/libSogouIme.so": "e821f0de7193ced47ebaa592827f85c31da861075e98817bdea0bda6828665b7",
+      "opt/sogoupinyin/files/lib/libSogouShell.so": "6fc1db35ba40e687621d138f142cf971d98d904f61e48767aef15b03ab520f50",
+      "opt/sogoupinyin/files/bin/sogoupinyin-service": "cc4125c3c890091352218be53d15d692f59b2802439d98db7eb9d1681adbbcd2",
+      "opt/sogoupinyin/files/lib/libSogouWbShell.so": "3488f903adc9c46f78b620537350c055cb7d5448166bf8229285b8964e1e0ee4"
+    }
+  },
+  "vendor_code_executed": false,
+  "engine_conversion_verified": false,
+  "desktop_verified": false,
+  "binaries": {
+    "usr/lib/x86_64-linux-gnu/fcitx/fcitx-sogoupinyin.so": {
+      "sha256": "95c1e5f378baf1ac19ee46ab67492a1b762bffb9c6dfdeb8db5f634181e6d024",
+      "needed": [
+        "librt.so.1",
+        "libpthread.so.0",
+        "libX11.so.6",
+        "libXtst.so.6",
+        "libxcb.so.1",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-x86-64.so.2"
+      ],
+      "rpath": [
+        "/opt/sogoupinyin/files/lib:/opt/sogoupinyin/files/lib/qt5/lib"
+      ],
+      "runpath": [],
+      "defined_symbol_count": 2,
+      "undefined_symbol_count": 615,
+      "relevant_exports": [
+        {
+          "name": "ABI_VERSION",
+          "address": 5382788,
+          "size": 4,
+          "defined": true,
+          "type": 1
+        },
+        {
+          "name": "ime",
+          "address": 5382800,
+          "size": 16,
+          "defined": true,
+          "type": 1
+        }
+      ],
+      "relevant_imports": [
+        "FcitxInstanceICSupportPreedit",
+        "FcitxGlobalConfigLoad",
+        "FcitxInstanceGetWindowPosition",
+        "socket",
+        "dbus_message_iter_init_append",
+        "FcitxInstanceGetCurrentIC",
+        "FcitxInstanceRegisterIMChangedHook",
+        "dbus_bus_name_has_owner",
+        "FcitxMessagesAddMessageAtLast",
+        "mq_open",
+        "dbus_message_iter_append_basic",
+        "dbus_message_new_method_call",
+        "dbus_bus_get",
+        "FcitxInstanceGetCurrentIM",
+        "dbus_connection_send",
+        "FcitxXDGGetFileUserWithPrefix",
+        "sendmsg",
+        "dbus_message_unref",
+        "FcitxInstanceRegisterIMv2",
+        "FcitxHotkeyIsHotKey",
+        "dbus_error_free",
+        "FcitxInstanceGetInputState",
+        "mq_unlink",
+        "XTestFakeKeyEvent",
+        "FcitxInstanceGetWindowRect",
+        "FcitxInstanceGetGlobalConfig",
+        "mq_receive",
+        "dbus_connection_unref",
+        "FcitxMessagesSetMessageCount",
+        "FcitxInstanceUpdatePreedit",
+        "dbus_error_init",
+        "FcitxInputStateGetClientPreedit",
+        "dbus_connection_send_with_reply_and_block",
+        "mq_send",
+        "FcitxUICommitPreedit",
+        "FcitxInstanceSetContext",
+        "FcitxInstanceGetContextBoolean",
+        "FcitxInstanceCommitString",
+        "mq_close",
+        "dbus_error_is_set",
+        "FcitxGlobalConfigSave"
+      ],
+      "debug_info": false
+    },
+    "opt/sogoupinyin/files/lib/libSogouIme.so": {
+      "sha256": "e821f0de7193ced47ebaa592827f85c31da861075e98817bdea0bda6828665b7",
+      "needed": [
+        "libSogouShell.so",
+        "libcm_wakeup.so",
+        "libcm_fixsent.so",
+        "libsogounlp.so",
+        "libtts.so",
+        "liboverlapAndTextCodes.so",
+        "libhandwriting_fc.so",
+        "libcross_beacon_sdk.so",
+        "libSDL2-2.0.so.0",
+        "libnet_intf.so",
+        "librt.so.1",
+        "libdl.so.2",
+        "libpthread.so.0",
+        "libglib-2.0.so.0",
+        "libgobject-2.0.so.0",
+        "libfontconfig.so.1",
+        "libcairo.so.2",
+        "librsvg-2.so.2",
+        "libssasr_offline.so",
+        "libbutterfly.so",
+        "libpunctuator.so",
+        "libopenal.so.1",
+        "libopenblas.so.0",
+        "libdbus-1.so.3",
+        "libSogouWbShell.so",
+        "libopencc.so.1",
+        "libpixman-1.so.0",
+        "libgsettings-qt.so.1",
+        "libX11.so.6",
+        "libXtst.so.6",
+        "libQt5DBus.so.5",
+        "libQt5Widgets.so.5",
+        "libQt5Gui.so.5",
+        "libQt5Core.so.5",
+        "libcurl.so.4",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-x86-64.so.2"
+      ],
+      "rpath": [
+        "$ORIGIN:$ORIGIN/qt5/lib"
+      ],
+      "runpath": [],
+      "defined_symbol_count": 22062,
+      "undefined_symbol_count": 863,
+      "relevant_exports": [
+        {
+          "name": "_ZN10t_sogouIme10HideJaCompEb",
+          "address": 3109730,
+          "size": 42,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme10ShowStatusEb",
+          "address": 3109282,
+          "size": 150,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme9IsVisibleEv",
+          "address": 3107614,
+          "size": 80,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme19SetTransparentAlphaEd",
+          "address": 3122822,
+          "size": 73,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme15SwitchInputModeEbbb",
+          "address": 3126706,
+          "size": 732,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme8ShowCompEv",
+          "address": 3109580,
+          "size": 69,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme14SetImeCallBackEP19t_iSogouImeCallBack",
+          "address": 3118270,
+          "size": 87,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme8SetParamEjj",
+          "address": 3113604,
+          "size": 3414,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme4BackEv",
+          "address": 3111866,
+          "size": 90,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme14BeautifyHwPathEiPi",
+          "address": 3108332,
+          "size": 65,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN14t_sogouImeBaseC2Ev",
+          "address": 3128592,
+          "size": 44,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme8GetUIEnvEv",
+          "address": 3110572,
+          "size": 62,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN14t_sogouImeBaseD0Ev",
+          "address": 3137204,
+          "size": 38,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme8GetInfosEj",
+          "address": 3117966,
+          "size": 129,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN17SogouShellWrapper9loadSSLibEPKc",
+          "address": 4726154,
+          "size": 58,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme10HideStatusEb",
+          "address": 3109432,
+          "size": 70,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme7ShowImeEb",
+          "address": 3107060,
+          "size": 553,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme14ReloadUiConfigEPKc",
+          "address": 3117216,
+          "size": 317,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme8HideCompEb",
+          "address": 3109650,
+          "size": 42,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme22SetCurrentInputWndRectEiiii",
+          "address": 3108662,
+          "size": 77,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme14IsMenuVisiableEv",
+          "address": 3107774,
+          "size": 37,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme9LogSwitchEi",
+          "address": 3127552,
+          "size": 64,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN17SogouShellWrapperC2Ev",
+          "address": 4725718,
+          "size": 21,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme20GetCellDictWordCountEv",
+          "address": 3108192,
+          "size": 140,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme4InitEPKcS1_S1_S1_S1_S1_S1_S1_S1_",
+          "address": 3106230,
+          "size": 829,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme16CheckTrailStatusEv",
+          "address": 3110246,
+          "size": 250,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "ReleaseSGAuthEnv",
+          "address": 3662874,
+          "size": 67,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme18GetCellDictVersionEv",
+          "address": 3107812,
+          "size": 191,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme10MoveStatusEii",
+          "address": 3109502,
+          "size": 77,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme9SetCursorEbi",
+          "address": 3117534,
+          "size": 95,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouImeD2Ev",
+          "address": 3106080,
+          "size": 81,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme19SaveInputModeStatusEi",
+          "address": 3126038,
+          "size": 179,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme5TouchEiii",
+          "address": 3108812,
+          "size": 24,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme11ShowSoftKbdEb",
+          "address": 3109920,
+          "size": 85,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme15SetCurInputModeEb",
+          "address": 3127438,
+          "size": 40,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme6SelectEi",
+          "address": 3112844,
+          "size": 96,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN14t_sogouImeBase20GetCellDictWordCountEv",
+          "address": 3137290,
+          "size": 15,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme10InsertCharEi",
+          "address": 3111354,
+          "size": 270,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouImeD1Ev",
+          "address": 3106080,
+          "size": 81,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN14t_sogouImeBaseD1Ev",
+          "address": 3137138,
+          "size": 65,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme17SetTraditionInputEb",
+          "address": 3123406,
+          "size": 170,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN17SogouShellWrapperD1Ev",
+          "address": 4726128,
+          "size": 26,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme6ActiveEi",
+          "address": 3111022,
+          "size": 331,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme14WordPredictionEPKc",
+          "address": 3113136,
+          "size": 136,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "ReleaseSogouIme",
+          "address": 3127627,
+          "size": 11,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme18SetCurKeyboardModeEiib",
+          "address": 3118244,
+          "size": 26,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN14t_sogouImeBase14BeautifyHwPathEiPi",
+          "address": 3137436,
+          "size": 22,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN14t_sogouImeBaseD2Ev",
+          "address": 3137138,
+          "size": 65,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme13SetCursorRectEiiii",
+          "address": 3108740,
+          "size": 71,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouImeD0Ev",
+          "address": 3106162,
+          "size": 38,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN14t_sogouImeBaseC1Ev",
+          "address": 3128592,
+          "size": 44,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme7GetInfoEj",
+          "address": 3117878,
+          "size": 87,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "GetSogouIme",
+          "address": 3127616,
+          "size": 11,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme14GetImeCallBackEv",
+          "address": 3118358,
+          "size": 18,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN17SogouShellWrapper11unLoadSSLibEv",
+          "address": 4726212,
+          "size": 52,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouImeC2Ev",
+          "address": 3105920,
+          "size": 160,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme15LoadSkinKbdViewEPKc",
+          "address": 3110948,
+          "size": 73,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme11MoveSoftKbdEii",
+          "address": 3110006,
+          "size": 95,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme6PageUpEv",
+          "address": 3113422,
+          "size": 90,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme14GetImeSkinPathEv",
+          "address": 3123698,
+          "size": 65,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme18OutputCandsByFcitxEPKc",
+          "address": 3127478,
+          "size": 73,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouImeC1Ev",
+          "address": 3105920,
+          "size": 160,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme11ShowPreeditEv",
+          "address": 3109814,
+          "size": 66,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme12GetExtraInfoEj",
+          "address": 3118096,
+          "size": 148,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme19ShowStatusUpdateDlgEPKc",
+          "address": 3110198,
+          "size": 48,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN14t_sogouImeBase18GetCellDictVersionEv",
+          "address": 3137258,
+          "size": 15,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme9GetCursorERi",
+          "address": 3117630,
+          "size": 91,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme9UpdateImeEv",
+          "address": 3108910,
+          "size": 371,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme8PageDownEv",
+          "address": 3113272,
+          "size": 150,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme18IsKeyboardVisiableEv",
+          "address": 3107694,
+          "size": 80,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme18IsMinorityLanguageE7e_param",
+          "address": 3122046,
+          "size": 356,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme12GetCandCountEv",
+          "address": 3111702,
+          "size": 55,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme15GetCellDictNameEv",
+          "address": 3108004,
+          "size": 187,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme11IsTouchModeEv",
+          "address": 3122896,
+          "size": 34,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme12UpdateUiInfoEv",
+          "address": 3118376,
+          "size": 3669,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN17SogouShellWrapperD2Ev",
+          "address": 4726128,
+          "size": 26,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "ReleaseSogouImeBase",
+          "address": 3127649,
+          "size": 11,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "GetSGAuthEnv",
+          "address": 3662729,
+          "size": 145,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme10ShowJaCompEv",
+          "address": 3109692,
+          "size": 37,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme17ProcessLangChangeEv",
+          "address": 3123894,
+          "size": 1875,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme9FocusCandEi",
+          "address": 3113038,
+          "size": 98,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme12ReloadConfigEv",
+          "address": 3117112,
+          "size": 104,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme12UpdateJaCompEv",
+          "address": 3109772,
+          "size": 42,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme8LoadSkinEPKc",
+          "address": 3110634,
+          "size": 64,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme12GetResultStrEv",
+          "address": 3111758,
+          "size": 53,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme15ResetPageScrollEv",
+          "address": 3113512,
+          "size": 92,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme5ClearEv",
+          "address": 3111956,
+          "size": 888,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme7MoveImeEii",
+          "address": 3108398,
+          "size": 264,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme24OutputCandResultIfNeededEv",
+          "address": 3125820,
+          "size": 218,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme22RestoreInputModeStatusEi",
+          "address": 3126218,
+          "size": 488,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme16GetImeVirtualKdbEv",
+          "address": 3110534,
+          "size": 37,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme16GetCurrentLayoutEv",
+          "address": 3123764,
+          "size": 130,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme10NeedInsertEi",
+          "address": 3117722,
+          "size": 156,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme13ShowUpdateDlgEPKc",
+          "address": 3110150,
+          "size": 48,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme8SetParamEjPKc",
+          "address": 3117018,
+          "size": 94,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN17SogouShellWrapperC1Ev",
+          "address": 4725718,
+          "size": 21,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN14t_sogouImeBase8GetInfosEj",
+          "address": 3137398,
+          "size": 37,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme8SelectPyEi",
+          "address": 3112940,
+          "size": 98,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme12ShowAboutDlgEPKc",
+          "address": 3110102,
+          "size": 48,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme16SetCurrentLayoutEPKc",
+          "address": 3122930,
+          "size": 237,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN14t_sogouImeBase15GetCellDictNameEv",
+          "address": 3137274,
+          "size": 15,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN17SogouShellWrapper4InitEPKcS1_S1_S1_S1_S1_",
+          "address": 4725740,
+          "size": 388,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme11HidePreeditEb",
+          "address": 3109880,
+          "size": 39,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme11SetSkinNameEPKc",
+          "address": 3123168,
+          "size": 237,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme10GetCompStrEv",
+          "address": 3111812,
+          "size": 53,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme23ScreenOrientationChangeEi",
+          "address": 3110698,
+          "size": 249,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme12GetImeUIInfoEv",
+          "address": 3110496,
+          "size": 37,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme10GetCandStrEj",
+          "address": 3111624,
+          "size": 78,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme10SetAuthEnvEPv",
+          "address": 3106200,
+          "size": 30,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "GetSogouImeBase",
+          "address": 3127638,
+          "size": 11,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme13GetImeVersionEv",
+          "address": 3123576,
+          "size": 122,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN10t_sogouIme14GetModeByParamE7e_param",
+          "address": 3122402,
+          "size": 419,
+          "defined": true,
+          "type": 2
+        }
+      ],
+      "relevant_imports": [
+        "GetSogouTts",
+        "ReleaseSogouVoice",
+        "GetSogouVoice",
+        "GetSogouVoiceOperation",
+        "socket",
+        "GetSogouShell",
+        "sendmsg",
+        "XTestFakeKeyEvent",
+        "shm_unlink"
+      ],
+      "debug_info": false
+    },
+    "opt/sogoupinyin/files/lib/libSogouShell.so": {
+      "sha256": "6fc1db35ba40e687621d138f142cf971d98d904f61e48767aef15b03ab520f50",
+      "needed": [
+        "libcm_wakeup.so",
+        "libcm_fixsent.so",
+        "libsogounlp.so",
+        "libtts.so",
+        "libSogouWbShell.so",
+        "libopencc.so.1",
+        "libX11.so.6",
+        "liboverlapAndTextCodes.so",
+        "libhandwriting_fc.so",
+        "libcairo.so.2",
+        "libpixman-1.so.0",
+        "libssasr_offline.so",
+        "libbutterfly.so",
+        "libpunctuator.so",
+        "libopenblas.so.0",
+        "librt.so.1",
+        "libpthread.so.0",
+        "libQt5DBus.so.5",
+        "libQt5Widgets.so.5",
+        "libQt5Gui.so.5",
+        "libQt5Core.so.5",
+        "libXtst.so.6",
+        "libdbus-1.so.3",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-x86-64.so.2"
+      ],
+      "rpath": [
+        "$ORIGIN:$ORIGIN/qt5/lib"
+      ],
+      "runpath": [],
+      "defined_symbol_count": 15,
+      "undefined_symbol_count": 967,
+      "relevant_exports": [
+        {
+          "name": "GetSogouTts",
+          "address": 857141,
+          "size": 11,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "ReleaseSogouVoice",
+          "address": 760193,
+          "size": 22,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "GetSogouVoice",
+          "address": 760156,
+          "size": 37,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "GetSogouVoiceOperation",
+          "address": 898229,
+          "size": 11,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "GetSogouShell",
+          "address": 564429,
+          "size": 768,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "GetSogouShellWrapper",
+          "address": 4440286,
+          "size": 18,
+          "defined": true,
+          "type": 2
+        }
+      ],
+      "relevant_imports": [
+        "GetSogouWbImcWrapper",
+        "BOOL_PadNumAsSelect",
+        "XQueryKeymap",
+        "_ZNK5t_env12GetValueBoolEPK10t_envEntryIbE",
+        "socket",
+        "sendmsg",
+        "XTestFakeKeyEvent",
+        "_ZN5t_env12SetValueBoolEPK10t_envEntryIbEb",
+        "shm_unlink"
+      ],
+      "debug_info": false
+    },
+    "opt/sogoupinyin/files/bin/sogoupinyin-service": {
+      "sha256": "cc4125c3c890091352218be53d15d692f59b2802439d98db7eb9d1681adbbcd2",
+      "needed": [
+        "libQt5DBus.so.5",
+        "libQt5Svg.so.5",
+        "libQt5QuickWidgets.so.5",
+        "libSogouIme.so",
+        "libSogouShell.so",
+        "libcross_beacon_sdk.so",
+        "libcm_wakeup.so",
+        "libcm_fixsent.so",
+        "libsogounlp.so",
+        "libtts.so",
+        "liboverlapAndTextCodes.so",
+        "libhandwriting_fc.so",
+        "libSogouWbShell.so",
+        "libX11.so.6",
+        "libXtst.so.6",
+        "libnet_intf.so",
+        "libSDL2-2.0.so.0",
+        "libopencc.so.1",
+        "librt.so.1",
+        "libdl.so.2",
+        "libpthread.so.0",
+        "libssasr_offline.so",
+        "libbutterfly.so",
+        "libpunctuator.so",
+        "libopenal.so.1",
+        "libopenblas.so.0",
+        "libQt5Quick.so.5",
+        "libQt5Qml.so.5",
+        "libQt5Network.so.5",
+        "libQt5Widgets.so.5",
+        "libQt5Gui.so.5",
+        "libQt5Core.so.5",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "rpath": [
+        "$ORIGIN/../lib:$ORIGIN/../lib/qt5/lib"
+      ],
+      "runpath": [],
+      "defined_symbol_count": 2112,
+      "undefined_symbol_count": 550,
+      "relevant_exports": [],
+      "relevant_imports": [
+        "mq_send",
+        "mq_receive",
+        "ReleaseSogouIme",
+        "GetSogouIme",
+        "mq_unlink",
+        "GetSGAuthEnv",
+        "GetSogouShellWrapper",
+        "mq_close",
+        "mq_open"
+      ],
+      "debug_info": false
+    },
+    "opt/sogoupinyin/files/lib/libSogouWbShell.so": {
+      "sha256": "3488f903adc9c46f78b620537350c055cb7d5448166bf8229285b8964e1e0ee4",
+      "needed": [
+        "libX11.so.6",
+        "libXtst.so.6",
+        "libstdc++.so.6",
+        "libm.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6"
+      ],
+      "rpath": [
+        "$ORIGIN:$ORIGIN/qt5/lib"
+      ],
+      "runpath": [],
+      "defined_symbol_count": 9548,
+      "undefined_symbol_count": 271,
+      "relevant_exports": [
+        {
+          "name": "_ZNK5t_env12GetValueBoolEPKw",
+          "address": 1765034,
+          "size": 37,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "BOOL_PadNumAsSelect",
+          "address": 5621512,
+          "size": 8,
+          "defined": true,
+          "type": 1
+        },
+        {
+          "name": "_ZN5t_env12SetValueBoolEPK10t_envEntryIbEb",
+          "address": 1757336,
+          "size": 54,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZN5t_env12SetValueBoolEPKwb",
+          "address": 1765072,
+          "size": 46,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "_ZNK5t_env12GetValueBoolEPK10t_envEntryIbE",
+          "address": 1757046,
+          "size": 161,
+          "defined": true,
+          "type": 2
+        },
+        {
+          "name": "GetSogouWbImcWrapper",
+          "address": 1490287,
+          "size": 18,
+          "defined": true,
+          "type": 2
+        }
+      ],
+      "relevant_imports": [
+        "GetSGAuthEnv",
+        "XQueryKeymap",
+        "shm_unlink"
+      ],
+      "debug_info": false
+    }
+  },
+  "shell_vtable_address": 10405712,
+  "shell_slots": [
+    {
+      "slot": 0,
+      "byte_offset": 0,
+      "target": 565990,
+      "status": "static"
+    },
+    {
+      "slot": 1,
+      "byte_offset": 8,
+      "target": 566490,
+      "status": "static"
+    },
+    {
+      "slot": 2,
+      "byte_offset": 16,
+      "target": 564242,
+      "status": "static"
+    },
+    {
+      "slot": 3,
+      "byte_offset": 24,
+      "target": 574164,
+      "status": "static"
+    },
+    {
+      "slot": 4,
+      "byte_offset": 32,
+      "target": 566528,
+      "status": "static",
+      "name": "initialize_paths",
+      "signature": "bool(void*, const char*, const char*, const char*, const char*, const char*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 4726016,
+      "caller_instruction": "0000000000481d00 <SogouShellWrapper::Init(char const*, char const*, char const*, char const*, char const*, char const*)@@Base+0x114>:\n  481d00:\tadd    $0x20,%rax\n  481d04:\tmov    (%rax),%rax\n  481d07:\trex.W\n  481d08:\t.byte 0x8b\n  481d09:\t.byte 0x15\n  481d0a:\tpop    %rdx\n  481d0b:\t.byte 0x8e"
+    },
+    {
+      "slot": 5,
+      "byte_offset": 40,
+      "target": 567326,
+      "status": "static",
+      "name": "active",
+      "signature": "bool(void*, int32_t)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3111118,
+      "caller_instruction": "00000000002f78ce <t_sogouIme::Active(int)@@Base+0x60>:\n  2f78ce:\tadd    $0x28,%rax\n  2f78d2:\tmov    (%rax),%rax\n  2f78d5:\trex.W\n  2f78d6:\t.byte 0x8b\n  2f78d7:\t.byte 0x15\n  2f78d8:\tmov    %?,(%rdx)"
+    },
+    {
+      "slot": 6,
+      "byte_offset": 48,
+      "target": 568642,
+      "status": "static",
+      "name": "insert_char",
+      "signature": "bool(void*, int32_t)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3111499,
+      "caller_instruction": "00000000002f7a4b <t_sogouIme::InsertChar(int)@@Base+0x91>:\n  2f7a4b:\tadd    $0x30,%rax\n  2f7a4f:\tmov    (%rax),%rax\n  2f7a52:\trex.W\n  2f7a53:\t.byte 0x8b\n  2f7a54:\t.byte 0x15\n  2f7a55:\trdtsc"
+    },
+    {
+      "slot": 7,
+      "byte_offset": 56,
+      "target": 568768,
+      "status": "static",
+      "name": "back",
+      "signature": "bool(void*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3111913,
+      "caller_instruction": "00000000002f7be9 <t_sogouIme::Back()@@Base+0x2f>:\n  2f7be9:\tadd    $0x38,%rax\n  2f7bed:\tmov    (%rax),%rax\n  2f7bf0:\trex.W\n  2f7bf1:\t.byte 0x8b\n  2f7bf2:\t.byte 0x15\n  2f7bf3:\tjno    2f7c24 <t_sogouIme::Clear()@@Base+0x10>"
+    },
+    {
+      "slot": 8,
+      "byte_offset": 64,
+      "target": 568834,
+      "status": "static",
+      "name": "clear",
+      "signature": "void(void*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3112397,
+      "caller_instruction": "00000000002f7dcd <t_sogouIme::Clear()@@Base+0x1b9>:\n  2f7dcd:\tadd    $0x40,%rax\n  2f7dd1:\tmov    (%rax),%rax\n  2f7dd4:\trex.W\n  2f7dd5:\t.byte 0x8b\n  2f7dd6:\t.byte 0x15\n  2f7dd7:\t.byte 0x8d\n  2f7dd8:\t.byte 0x2d"
+    },
+    {
+      "slot": 9,
+      "byte_offset": 72,
+      "target": 568894,
+      "status": "static",
+      "name": "select",
+      "signature": "void(void*, int32_t)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3112894,
+      "caller_instruction": "00000000002f7fbe <t_sogouIme::Select(int)@@Base+0x32>:\n  2f7fbe:\tadd    $0x48,%rax\n  2f7fc2:\tmov    (%rax),%rax\n  2f7fc5:\trex.W\n  2f7fc6:\t.byte 0x8b\n  2f7fc7:\t.byte 0x15\n  2f7fc8:\tpushf\n  2f7fc9:\t.byte 0x2b"
+    },
+    {
+      "slot": 10,
+      "byte_offset": 80,
+      "target": 568968,
+      "status": "static",
+      "name": "select_pinyin",
+      "signature": "void(void*, int32_t)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3112990,
+      "caller_instruction": "00000000002f801e <t_sogouIme::SelectPy(int)@@Base+0x32>:\n  2f801e:\tadd    $0x50,%rax\n  2f8022:\tmov    (%rax),%rax\n  2f8025:\trex.W\n  2f8026:\t.byte 0x8b\n  2f8027:\t.byte 0x15\n  2f8028:\tcmp    $0x2b,%al"
+    },
+    {
+      "slot": 11,
+      "byte_offset": 88,
+      "target": 569042,
+      "status": "static",
+      "name": "focus_candidate",
+      "signature": "opaque",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3113088,
+      "caller_instruction": "00000000002f8080 <t_sogouIme::FocusCand(int)@@Base+0x32>:\n  2f8080:\tadd    $0x58,%rax\n  2f8084:\tmov    (%rax),%rax\n  2f8087:\trex.W\n  2f8088:\t.byte 0x8b\n  2f8089:\t.byte 0x15\n  2f808a:\tfisubrl (%rdx)"
+    },
+    {
+      "slot": 12,
+      "byte_offset": 96,
+      "target": 569116,
+      "status": "static",
+      "name": "word_prediction",
+      "signature": "opaque",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3113222,
+      "caller_instruction": "00000000002f8106 <t_sogouIme::WordPrediction(char const*)@@Base+0x56>:\n  2f8106:\tadd    $0x60,%rax\n  2f810a:\tmov    (%rax),%rax\n  2f810d:\trex.W\n  2f810e:\t.byte 0x8b\n  2f810f:\t.byte 0x15\n  2f8110:\tpush   %rsp\n  2f8111:\t.byte 0x2a"
+    },
+    {
+      "slot": 13,
+      "byte_offset": 104,
+      "target": 569192,
+      "status": "static",
+      "name": "page_down",
+      "signature": "bool(void*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3113328,
+      "caller_instruction": "00000000002f8170 <t_sogouIme::PageDown()@@Base+0x38>:\n  2f8170:\tadd    $0x68,%rax\n  2f8174:\tmov    (%rax),%rax\n  2f8177:\trex.W\n  2f8178:\t.byte 0x8b\n  2f8179:\t.byte 0x15\n  2f817a:\t(bad)\n  2f817b:\t.byte 0x29"
+    },
+    {
+      "slot": 14,
+      "byte_offset": 112,
+      "target": 569404,
+      "status": "static",
+      "name": "page_up",
+      "signature": "bool(void*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3113469,
+      "caller_instruction": "00000000002f81fd <t_sogouIme::PageUp()@@Base+0x2f>:\n  2f81fd:\tadd    $0x70,%rax\n  2f8201:\tmov    (%rax),%rax\n  2f8204:\trex.W\n  2f8205:\t.byte 0x8b\n  2f8206:\t.byte 0x15\n  2f8207:\tpop    %rbp\n  2f8208:\t.byte 0x29"
+    },
+    {
+      "slot": 15,
+      "byte_offset": 120,
+      "target": 569470,
+      "status": "static",
+      "name": "pinyin_list",
+      "signature": "object*(void*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3119764,
+      "caller_instruction": "00000000002f9a94 <t_sogouIme::UpdateUiInfo()@@Base+0x56c>:\n  2f9a94:\tadd    $0x78,%rax\n  2f9a98:\tmov    (%rax),%rax\n  2f9a9b:\trex.W\n  2f9a9c:\t.byte 0x8b\n  2f9a9d:\t.byte 0x15\n  2f9a9e:\t(bad)\n  2f9a9f:\t.byte 0x10"
+    },
+    {
+      "slot": 16,
+      "byte_offset": 128,
+      "target": 569538,
+      "status": "static",
+      "name": "candidate_list",
+      "signature": "object*(void*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3119359,
+      "caller_instruction": "00000000002f98ff <t_sogouIme::UpdateUiInfo()@@Base+0x3d7>:\n  2f98ff:\tsub    $0xffffffffffffff80,%rax\n  2f9903:\tmov    (%rax),%rax\n  2f9906:\trex.W\n  2f9907:\t.byte 0x8b\n  2f9908:\t.byte 0x15\n  2f9909:\tpop    %rbx\n  2f990a:\t.byte 0x12"
+    },
+    {
+      "slot": 17,
+      "byte_offset": 136,
+      "target": 569606,
+      "status": "static",
+      "name": "composition_text",
+      "signature": "object*(void*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3121234,
+      "caller_instruction": "00000000002fa052 <t_sogouIme::UpdateUiInfo()@@Base+0xb2a>:\n  2fa052:\tadd    $0x88,%rax\n  2fa058:\tmov    (%rax),%rax\n  2fa05b:\trex.W\n  2fa05c:\t.byte 0x8b\n  2fa05d:\t.byte 0x15"
+    },
+    {
+      "slot": 18,
+      "byte_offset": 144,
+      "target": 569676,
+      "status": "static",
+      "name": "auxiliary_text",
+      "signature": "object*(void*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3121325,
+      "caller_instruction": "00000000002fa0ad <t_sogouIme::UpdateUiInfo()@@Base+0xb85>:\n  2fa0ad:\tadd    $0x90,%rax\n  2fa0b3:\tmov    (%rax),%rax\n  2fa0b6:\trex.W\n  2fa0b7:\t.byte 0x8b\n  2fa0b8:\t.byte 0x15"
+    },
+    {
+      "slot": 19,
+      "byte_offset": 152,
+      "target": 569746,
+      "status": "static",
+      "name": "result_text",
+      "signature": "object*(void*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3119495,
+      "caller_instruction": "00000000002f9987 <t_sogouIme::UpdateUiInfo()@@Base+0x45f>:\n  2f9987:\tadd    $0x98,%rax\n  2f998d:\tmov    (%rax),%rax\n  2f9990:\trex.W\n  2f9991:\t.byte 0x8b\n  2f9992:\t.byte 0x15"
+    },
+    {
+      "slot": 20,
+      "byte_offset": 160,
+      "target": 569816,
+      "status": "static"
+    },
+    {
+      "slot": 21,
+      "byte_offset": 168,
+      "target": 570452,
+      "status": "static",
+      "name": "set_string_parameter",
+      "signature": "opaque",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3117072,
+      "caller_instruction": "00000000002f9010 <t_sogouIme::SetParam(unsigned int, char const*)@@Base+0x36>:\n  2f9010:\tadd    $0xa8,%rax\n  2f9016:\tmov    (%rax),%rax\n  2f9019:\trex.W\n  2f901a:\t.byte 0x8b\n  2f901b:\t.byte 0x15"
+    },
+    {
+      "slot": 22,
+      "byte_offset": 176,
+      "target": 570926,
+      "status": "static",
+      "name": "extra_text",
+      "signature": "object*(void*, uint32_t)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3118172,
+      "caller_instruction": "00000000002f945c <t_sogouIme::GetExtraInfo(unsigned int)@@Base+0x4c>:\n  2f945c:\tadd    $0xb0,%rax\n  2f9462:\tmov    (%rax),%rax\n  2f9465:\trex.W\n  2f9466:\t.byte 0x8b\n  2f9467:\t.byte 0x15"
+    },
+    {
+      "slot": 23,
+      "byte_offset": 184,
+      "target": 571072,
+      "status": "static"
+    },
+    {
+      "slot": 24,
+      "byte_offset": 192,
+      "target": 571440,
+      "status": "static",
+      "name": "reload_config",
+      "signature": "opaque",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3117171,
+      "caller_instruction": "00000000002f9073 <t_sogouIme::ReloadConfig()@@Base+0x3b>:\n  2f9073:\tadd    $0xc0,%rax\n  2f9079:\tmov    (%rax),%rax\n  2f907c:\trex.W\n  2f907d:\t.byte 0x8b\n  2f907e:\t.byte 0x15"
+    },
+    {
+      "slot": 25,
+      "byte_offset": 200,
+      "target": 571958,
+      "status": "static",
+      "name": "set_cursor",
+      "signature": "bool(void*, bool, int32_t)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3117589,
+      "caller_instruction": "00000000002f9215 <t_sogouIme::SetCursor(bool, int)@@Base+0x37>:\n  2f9215:\tadd    $0xc8,%rax\n  2f921b:\tmov    (%rax),%rax\n  2f921e:\t.byte 0xf\n  2f921f:\tmov    $0x75,%dh"
+    },
+    {
+      "slot": 26,
+      "byte_offset": 208,
+      "target": 572040,
+      "status": "static",
+      "name": "get_cursor",
+      "signature": "bool(void*, int32_t*)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3117681,
+      "caller_instruction": "00000000002f9271 <t_sogouIme::GetCursor(int&)@@Base+0x33>:\n  2f9271:\tadd    $0xd0,%rax\n  2f9277:\tmov    (%rax),%rax\n  2f927a:\trex.W\n  2f927b:\t.byte 0x8b\n  2f927c:\t.byte 0x15"
+    },
+    {
+      "slot": 27,
+      "byte_offset": 216,
+      "target": 572118,
+      "status": "static",
+      "name": "need_insert",
+      "signature": "bool(void*, int32_t)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3117808,
+      "caller_instruction": "00000000002f92f0 <t_sogouIme::NeedInsert(int)@@Base+0x56>:\n  2f92f0:\tadd    $0xd8,%rax\n  2f92f6:\tmov    (%rax),%rax\n  2f92f9:\trex.W\n  2f92fa:\t.byte 0x8b\n  2f92fb:\t.byte 0x15"
+    },
+    {
+      "slot": 28,
+      "byte_offset": 224,
+      "target": 572194,
+      "status": "static",
+      "name": "integer_info",
+      "signature": "int32_t(void*, uint32_t)",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3117928,
+      "caller_instruction": "00000000002f9368 <t_sogouIme::GetInfo(unsigned int)@@Base+0x32>:\n  2f9368:\tadd    $0xe0,%rax\n  2f936e:\tmov    (%rax),%rax\n  2f9371:\trex.W\n  2f9372:\t.byte 0x8b\n  2f9373:\t.byte 0x15"
+    },
+    {
+      "slot": 29,
+      "byte_offset": 232,
+      "target": 572270,
+      "status": "static",
+      "name": "integer_list",
+      "signature": "opaque C++ aggregate return",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3118027,
+      "caller_instruction": "00000000002f93cb <t_sogouIme::GetInfos(unsigned int)@@Base+0x3d>:\n  2f93cb:\tadd    $0xe8,%rax\n  2f93d1:\tmov    (%rax),%rax\n  2f93d4:\trex.W\n  2f93d5:\t.byte 0x8b\n  2f93d6:\t.byte 0x15"
+    },
+    {
+      "slot": 30,
+      "byte_offset": 240,
+      "target": 572362,
+      "status": "static"
+    },
+    {
+      "slot": 31,
+      "byte_offset": 248,
+      "target": 572452,
+      "status": "static"
+    },
+    {
+      "slot": 32,
+      "byte_offset": 256,
+      "target": 572536,
+      "status": "static"
+    },
+    {
+      "slot": 33,
+      "byte_offset": 264,
+      "target": 569258,
+      "status": "static",
+      "name": "associate_result",
+      "signature": "opaque",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3108883,
+      "caller_instruction": "00000000002f7013 <t_sogouIme::IsAssociateResult() const@@Base+0x2f>:\n  2f7013:\tadd    $0x108,%rax\n  2f7019:\tmov    (%rax),%rax\n  2f701c:\trex.W\n  2f701d:\t.byte 0x8b\n  2f701e:\t.byte 0x15"
+    },
+    {
+      "slot": 34,
+      "byte_offset": 272,
+      "target": 569326,
+      "status": "static",
+      "name": "cell_dictionary_info",
+      "signature": "opaque",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3107901,
+      "caller_instruction": "00000000002f6c3d <t_sogouIme::GetCellDictVersion()@@Base+0x59>:\n  2f6c3d:\tadd    $0x110,%rax\n  2f6c43:\tmov    (%rax),%rax\n  2f6c46:\trex.W\n  2f6c47:\t.byte 0x8b\n  2f6c48:\t.byte 0x15"
+    },
+    {
+      "slot": 35,
+      "byte_offset": 280,
+      "target": 572614,
+      "status": "static"
+    },
+    {
+      "slot": 36,
+      "byte_offset": 288,
+      "target": 571358,
+      "status": "static",
+      "name": "beautify_handwriting_path",
+      "signature": "opaque",
+      "caller_binary": "opt/sogoupinyin/files/lib/libSogouIme.so",
+      "caller_address": 3108364,
+      "caller_instruction": "00000000002f6e0c <t_sogouIme::BeautifyHwPath(int, int*)@@Base+0x20>:\n  2f6e0c:\tadd    $0x120,%rax\n  2f6e12:\tmov    (%rax),%rax\n  2f6e15:\trex.W\n  2f6e16:\t.byte 0x8b\n  2f6e17:\t.byte 0x15"
+    }
+  ],
+  "pc_keyboard_contract": {
+    "layout": 19,
+    "vtable": 10406928,
+    "press_flag": 2147483648,
+    "virtual_key_A": 65,
+    "virtual_key_Z": 90,
+    "slots": {
+      "6": 661342,
+      "16": 669342,
+      "17": 669360,
+      "19": 669396,
+      "25": 671690,
+      "26": 671714,
+      "28": 671750
+    },
+    "keyboard_state": 649320,
+    "string_vtable": 10404336,
+    "string_assign": 511324
+  },
+  "result_buffer_contract": {
+    "shell_child_offset": 56,
+    "pc_core_offset": 304,
+    "core_vtable": 10470160,
+    "query_slot": 25,
+    "query": 4263230,
+    "composition_vtable": 10475792,
+    "buffer_slot": 7,
+    "buffer_query": 4427544,
+    "buffer_offset": 5208,
+    "transient_reset": 4411892,
+    "reset_width": 4,
+    "clear_scope": "core result terminator and converted UTF-8 output only"
+  },
+  "keypad_contract": {
+    "first_virtual_key": 96,
+    "last_virtual_key": 105,
+    "environment_factory": 4336374,
+    "selection_setting": "BOOL_PadNumAsSelect",
+    "selection_enabled": false,
+    "conversion_runtime_verified": false
+  },
+  "protocol": {
+    "ImeClient.proto": {
+      "schema": {
+        "name": "ImeClient.proto",
+        "messages": [
+          {
+            "name": "SogouImeClientProto",
+            "fields": [
+              {
+                "name": "szPathShell",
+                "number": 1,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "szSysDict",
+                "number": 2,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "szUsrDict",
+                "number": 3,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "szXmlPath",
+                "number": 4,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "szResPath",
+                "number": 5,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "bShowIme",
+                "number": 6,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "nTouchFlg",
+                "number": 7,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nTouchX",
+                "number": 8,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nTouchY",
+                "number": 9,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nMoveX",
+                "number": 10,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nMoveY",
+                "number": 11,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nInsertChar",
+                "number": 12,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nPageSize",
+                "number": 13,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "bFullShape",
+                "number": 14,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "bChineseSymbol",
+                "number": 15,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "nWndId",
+                "number": 16,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nTimerID",
+                "number": 17,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nTopPointer",
+                "number": 18,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nLongPressFlg",
+                "number": 19,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nLongPressX",
+                "number": 20,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nLongPressY",
+                "number": 21,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nNeedInsertChar",
+                "number": 22,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nActive",
+                "number": 23,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "bChinese",
+                "number": 24,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "bTradition",
+                "number": 25,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "bReverse",
+                "number": 26,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "nParamIdx",
+                "number": 27,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nParamVal",
+                "number": 28,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "bSelect",
+                "number": 29,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "strLayout",
+                "number": 30,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "strSkinName",
+                "number": 31,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "nMoveFlag",
+                "number": 32,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nCurrInputWndX",
+                "number": 33,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nCurrInputWndY",
+                "number": 34,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nCurrInputWndW",
+                "number": 35,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nCurrInputWndH",
+                "number": 36,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nCurrCursorX",
+                "number": 37,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nCurrCursorY",
+                "number": 38,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nCurrCursorW",
+                "number": 39,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nCurrCursorH",
+                "number": 40,
+                "label": 1,
+                "type": 5
+              }
+            ]
+          }
+        ]
+      },
+      "frontend": {
+        "file_offset": 2465136,
+        "size": 841,
+        "sha256": "ddcdf05ee3d2fa97cd8f4ebc729379e6b9f5a30cc64fb63d71067fead02ae587"
+      },
+      "service": {
+        "file_offset": 1192840,
+        "size": 841,
+        "sha256": "ddcdf05ee3d2fa97cd8f4ebc729379e6b9f5a30cc64fb63d71067fead02ae587"
+      },
+      "equality": "byte-identical"
+    },
+    "ImeServer.proto": {
+      "schema": {
+        "name": "ImeServer.proto",
+        "messages": [
+          {
+            "name": "SogouImeServerRetProto",
+            "fields": [
+              {
+                "name": "bInited",
+                "number": 1,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "bInsertChar",
+                "number": 2,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "szCompStr",
+                "number": 3,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "nCursorIdx",
+                "number": 4,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nCursorPos",
+                "number": 5,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "szCandResStr",
+                "number": 6,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "bFullShape",
+                "number": 7,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "bChineseSymbol",
+                "number": 8,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "nCandCount",
+                "number": 9,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nFocusCandIdx",
+                "number": 10,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "strCands",
+                "number": 11,
+                "label": 3,
+                "type": 9
+              },
+              {
+                "name": "ecFuncKey",
+                "number": 12,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "bPreOutput",
+                "number": 13,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "pPixels",
+                "number": 14,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nRowBytes",
+                "number": 15,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nWidth",
+                "number": 16,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nHeight",
+                "number": 17,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nRectLeft",
+                "number": 18,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nRectTop",
+                "number": 19,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nRectRight",
+                "number": 20,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nRectBottom",
+                "number": 21,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "bNeedInsertChar",
+                "number": 22,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "bActive",
+                "number": 23,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "bChinese",
+                "number": 24,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "bTradition",
+                "number": 25,
+                "label": 1,
+                "type": 8
+              },
+              {
+                "name": "nOutputFlg",
+                "number": 26,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "nSimulateKey",
+                "number": 27,
+                "label": 1,
+                "type": 5
+              },
+              {
+                "name": "strImeVersion",
+                "number": 28,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "strImeSkinPath",
+                "number": 29,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "strCurrentLayout",
+                "number": 30,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "strCellDictVersion",
+                "number": 31,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "strCellDictName",
+                "number": 32,
+                "label": 1,
+                "type": 9
+              },
+              {
+                "name": "nCellDictWordCount",
+                "number": 33,
+                "label": 1,
+                "type": 5
+              }
+            ]
+          }
+        ]
+      },
+      "frontend": {
+        "file_offset": 2466928,
+        "size": 730,
+        "sha256": "916d5ca8e1c2776da21a921194ad77c33c33a5b47afc32abb771144cdc13c4b0"
+      },
+      "service": {
+        "file_offset": 1191456,
+        "size": 730,
+        "sha256": "916d5ca8e1c2776da21a921194ad77c33c33a5b47afc32abb771144cdc13c4b0"
+      },
+      "equality": "byte-identical"
+    }
+  }
+}

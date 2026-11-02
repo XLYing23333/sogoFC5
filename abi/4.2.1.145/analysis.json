@@ -1573,6 +1573,14 @@
     "selection_enabled": false,
     "conversion_runtime_verified": false
   },
+  "learning_contract": {
+    "factory": 2325856,
+    "regular_save": 1104000,
+    "sync_save": 1104224,
+    "save_core": 2509776,
+    "native_call_signature": "void(void*, const char*, int*)",
+    "runtime_persistence_verified": false
+  },
   "protocol": {
     "ImeClient.proto": {
       "schema": {

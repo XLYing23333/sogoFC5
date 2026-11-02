@@ -1,5 +1,5 @@
 Package: sogo-fc5
-Version: 1.0.0
+Version: 1.0.1
 Architecture: amd64
 Maintainer: Local integration <local@localhost>
 Section: non-free/utils

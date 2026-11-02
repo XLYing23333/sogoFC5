@@ -40,6 +40,11 @@ def main():
         assert "_ZNK5t_env12GetValueBoolEPK10t_envEntryIbE" in exports
         # The native reset writes a wchar terminator through the same result
         # getter used by the conversion path; it does not free the buffer.
+        # The regular and fsync wrappers call the same save core with distinct
+        # flags. The diagnostic int output is initialized by the wrapper.
+        assert shell.read(0x10d8e3,2)==b"\x31\xf6"
+        assert shell.read(0x10d9c7,5)==b"\xbe\x01\x00\x00\x00"
+        assert report["learning_contract"]["sync_save"]==0x10d960
         assert shell.read(0x435217,6)==b"\xc7\x00\x00\x00\x00\x00"
         assert shell.read(0x438f24,6)==b"\x48\x05\x58\x14\x00\x00"
         assert shell.pointer(0x9ecc10+13*8)==0xa1b0e

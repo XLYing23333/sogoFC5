@@ -10,11 +10,11 @@
 #include <sys/socket.h>
 
 namespace sogo::direct {
-constexpr std::uint32_t Magic=0x324f4753, Version=2;
+constexpr std::uint32_t Magic=0x324f4753, Version=3;
 constexpr std::uint32_t ReplyHandled=1,ReplyPageNext=2,ReplyPagePrevious=4,ReplyPageReset=8;
 constexpr std::size_t MaxPayload=60000, MaxPending=128;
 constexpr std::uint64_t DeadlineUs=180000;
-enum class Command : std::uint32_t {Ready=1,Focus,Blur,Key,Select,Previous,Next,Clear,Stop,Reply,Fault};
+enum class Command : std::uint32_t {Ready=1,Focus,Blur,Key,Select,Previous,Next,Clear,Stop,Reply,Fault,Save};
 struct Header {
     std::uint32_t magic=Magic,version=Version,type=0,size=0;
     std::uint64_t generation=0,context=0,sequence=0;

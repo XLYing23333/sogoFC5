@@ -48,6 +48,7 @@ public:
         // The engine exits when its parent disappears. Stop normally first so
         // vendor cleanup can save learning data; no desktop process is killed.
     }
+    void save()override{if(ready_&&fd_>=0)send(fd_,packet(Command::Save));}
     void activate(const InputMethodEntry&,InputContextEvent& event)override{
         context_=event.inputContext()->watch();active_=true;page_=0;composing_=false;
         routes_.reset();owned_.clear();pending_.focus(++contextId_);clearPanel();

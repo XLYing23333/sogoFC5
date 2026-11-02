@@ -1,7 +1,7 @@
 #include "protocol.hpp"
 #include "profile.hpp"
 #include "vendor.hpp"
-#include "editing.hpp"
+#include "worker_runtime.hpp"
 #include <QCoreApplication>
 #include <QSocketNotifier>
 #include <QTimer>
@@ -12,7 +12,6 @@
 #include <signal.h>
 
 using namespace sogo::direct;
-static std::uint64_t monotonicUs(){return std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now().time_since_epoch()).count();}
 int main(int argc,char** argv){
     int fd=-1;bool probe=false,check=false;
     std::filesystem::path vendor=SOGO_VENDOR_ROOT;
@@ -26,9 +25,10 @@ int main(int argc,char** argv){
     }
     if(!probe&&!check&&fd<0)return 2;
     umask(0077);
-    if(fd>=0){const auto parent=getppid();prctl(PR_SET_PDEATHSIG,SIGTERM);if(getppid()!=parent)return 1;}
     try{
         if(check){Vendor::verify(vendor);std::cout<<"{\"vendor_hashes\":true,\"vendor_code_executed\":false}\n";return 0;}
+        TerminationSignals terminationSignals;
+        if(fd>=0){const auto parent=getppid();if(prctl(PR_SET_PDEATHSIG,SIGTERM))throw std::runtime_error("cannot monitor parent lifetime");if(getppid()!=parent)return 1;}
         const auto root=dataRoot();const auto profile=prepareProfile(root);
         // Keep this descriptor open until process exit, including the vendor's
         // atexit callbacks. An additional worker or probe cannot write the same
@@ -46,31 +46,10 @@ int main(int argc,char** argv){
             engine.key(32,0,false);auto committed=engine.snapshot();engine.key(32,0,true);
             std::cout<<"{\"layout\":19,\"nihao_candidate\":"<<(candidate?"true":"false")
                      <<",\"nihao_commit\":"<<(committed.result=="你好"?"true":"false")<<"}\n";
+            terminationSignals.boundCleanup();engine.saveLearning(true);
             return candidate&&committed.result=="你好"?0:1;
         }
-        if(!send(fd,packet(Command::Ready)))return 1;
-        std::uint64_t generation=0,context=0;Editing editing;
-        QSocketNotifier notifier(fd,QSocketNotifier::Read);
-        QObject::connect(&notifier,&QSocketNotifier::activated,&application,[&](){
-            for(unsigned i=0;i<32;++i){
-                Message message;const auto status=receive(fd,message);
-                if(status==0)return;
-                if(status<0){application.quit();return;}
-                const auto& h=message.header;const auto command=static_cast<Command>(h.type);
-                try{
-                    if(command==Command::Stop){application.quit();return;}
-                    if(command==Command::Focus){engine.reset();editing.reset();generation=h.generation;context=h.context;continue;}
-                    if(command==Command::Blur){engine.reset();editing.reset();generation=0;context=0;continue;}
-                    if(h.generation!=generation||h.context!=context)continue;
-                    const auto begin=monotonicUs();auto outcome=editing.process(engine,h);
-                    auto reply=h;reply.type=static_cast<std::uint32_t>(Command::Reply);
-                    reply.handled=outcome.flags;
-                    reply.engineUs=monotonicUs()-begin;
-                    if(!send(fd,reply,encode(outcome.value))){application.quit();return;}
-                }catch(const std::exception&){send(fd,packet(Command::Fault));application.quit();return;}
-            }
-        });
-        return application.exec();
+        return runWorker(application,engine,fd,terminationSignals);
     }catch(const std::exception& error){
         // Error messages contain interface/resource names, never input text.
         if(fd>=0)send(fd,packet(Command::Fault));

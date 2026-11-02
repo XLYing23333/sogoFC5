@@ -1,11 +1,11 @@
 {
-  "project_version": "1.0.0",
+  "project_version": "1.0.1",
   "baseline_version": "4.2.1.145",
   "baseline_architecture": "amd64",
   "compiler": "GNU C++ 13.3.0",
   "protobuf_compiler": "3.21.12",
   "ctest": {
-    "passed": 15,
+    "passed": 17,
     "failed": 0,
     "tests": [
       "compiler-abi-contract",
@@ -21,6 +21,8 @@
       "native-scheduling",
       "native-latency",
       "native-keypad",
+      "native-learning",
+      "native-worker_lifecycle",
       "recovered-protocol-source",
       "official-binary-static-contract"
     ]
@@ -61,7 +63,7 @@
     "original_gui_construction_rejected": true,
     "original_gui_available": false
   },
-  "package_sha256": "b88903debb1c4508cf2c1170203d891ce36b81c6cf827ae30978155397f7ed93",
+  "package_sha256": "28429baa21a8d2e5c6eca3f6a0ff62f6469db885667f1960f49d27d763fb9aab",
   "test_environment": {
     "distribution": "Ubuntu 24.04 amd64",
     "fcitx5": "5.1.7",
@@ -71,9 +73,9 @@
     "private_dbus_acceptance_run": false,
     "installed_or_restarted_input_method": false
   },
-  "reproducible_deb_verified": true,
+  "reproducible_deb_verified": false,
   "runtime_input_scope": "PC pinyin layout 19; Wubi dictionaries packaged without a Wubi input method entry",
-  "native_protocol_version": 2,
+  "native_protocol_version": 3,
   "editing_checks": {
     "single_candidate_number": true,
     "candidate_text_preserved": true,
@@ -96,7 +98,7 @@
     "Identical visible candidate pages cannot be distinguished through snapshot comparison.",
     "Editing and keypad behavior are covered by mocks and static checks; real engine mixed letter/digit composition requires desktop verification."
   ],
-  "reproducibility_scope": "Two clean builds in different directories using the same compiler, SDK, Qt and packaging tools; byte-identical deb artifacts",
+  "reproducibility_scope": "Not verified for the current artifact",
   "result_buffer_checks": {
     "core_query_vtable": "0x9fc310",
     "query_slot": 25,
@@ -165,7 +167,7 @@
     "manual_palette_action_only": true,
     "desktop_appearance_tested": false
   },
-  "release_name": "sogo-FC5-v1.0.0",
+  "release_name": "sogo-FC5-v1.0.1",
   "branding": {
     "asset": "assets/SogoFC5.png",
     "installed_path": "/usr/share/pixmaps/sogo-fc5.png",
@@ -177,5 +179,24 @@
     ],
     "desktop_rendering_verified": false,
     "sha256": "cbfeaeff4fe7b7ab66e19a3015e57793a80b3634d215eaaa47d812fc7f7fffa7"
+  },
+  "learning_checks": {
+    "pinned_native_save_call_chain_verified_statically": true,
+    "normal_save": "0x10d880",
+    "sync_save": "0x10d960",
+    "idle_seconds": 2,
+    "continuous_input_interval_seconds": 30,
+    "failed_call_retry_seconds": 5,
+    "signal_fd_inherited_mask": true,
+    "stop_eof_sigterm_paths_with_mock_backend": true,
+    "mock_persisted_file_read_after_worker_exit": true,
+    "shutdown_stall_terminated_by_alarm": true,
+    "normal_save_failure_retains_dirty_state": true,
+    "status_excludes_input_content": true,
+    "unchanged_user_data_root": true,
+    "real_vendor_save_executed": false,
+    "real_vendor_reload_verified": false,
+    "real_reboot_verified": false,
+    "native_return_is_not_storage_receipt": true
   }
 }

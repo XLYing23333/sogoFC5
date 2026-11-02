@@ -161,7 +161,10 @@ def analyze(root, output, package=None):
         ("native-bool-setting", "opt/sogoupinyin/files/lib/libSogouWbShell.so", 0x1ad098, 0x1ad0ce),
         ("result-string-assign", SHELL, 0x7cd5c, 0x7cd90),
         ("keyboard-event-state", SHELL, 0x9e868, 0x9e8a0),
-        ("authorization-initialization", IME, 0x37acf2, 0x37ad28)]:
+        ("authorization-initialization", IME, 0x37acf2, 0x37ad28),
+        ("native-learning-factory", SHELL, 0x237d60, 0x237d9c),
+        ("native-learning-save", SHELL, 0x10d880, 0x10da17),
+        ("native-learning-call-chain", SHELL, 0xf1f9e, 0xf2005)]:
         (evidence / (name + ".asm")).write_text(assembly(root / relative, start, end))
     report = dict(schema=1, baseline=baseline, vendor_code_executed=False,
                   engine_conversion_verified=False, desktop_verified=False,
@@ -177,6 +180,10 @@ def analyze(root, output, package=None):
                   keypad_contract=dict(first_virtual_key=0x60,last_virtual_key=0x69,
                       environment_factory=0x422af6,selection_setting="BOOL_PadNumAsSelect",
                       selection_enabled=False,conversion_runtime_verified=False),
+                  learning_contract=dict(factory=0x237d60,regular_save=0x10d880,
+                      sync_save=0x10d960,save_core=0x264bd0,
+                      native_call_signature="void(void*, const char*, int*)",
+                      runtime_persistence_verified=False),
                   protocol=protocol)
     (output / "analysis.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps(dict(version=baseline["version"], binaries=len(binaries),

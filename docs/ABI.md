@@ -108,6 +108,20 @@ PC 入口先执行 `ToAscii`，再由 `0xa0ad0` 将字符置于高 16 位、虚�
 以上静态证据确认键盘身份、配置接口和选择分支；关闭选词后字母/数字混排的完整转换结果尚未通过真实引擎执行验证。
 对应证据位于 `keypad-selection-gate.asm`、`native-input-environment.asm`、`native-key-character-packing.asm` 和 `native-bool-setting.asm`。
 
+## 原厂学习保存边界
+
+`libSogouShell.so` 的 `0xf1f9e` 调用链先取得 `0x237d60` 单例，
+`0x237f40` 原样返回该对象指针，再按同步参数选择 `0x10d880` 或 `0x10d960`。
+两个包装入口使用 `void(void*, const char*, int*)` 的调用形式，并调用 `0x264bd0`，
+分别传入普通保存标志 0 和 fsync 标志 1。第三参数的整型输出先初始化为零；
+它不能作为逐个词库文件成功落盘的回执。
+
+适配端在正常初始化后核对对象首字段非空，在同一引擎线程调用这些保存入口。
+地址只适用于固定 SHA-256 的原厂库，不导出或跨进程传递原厂对象。
+保存调用不重置组词、结果缓冲或输入布局；周期保存不设置 fsync 标志，退出保存设置该标志。
+调用链和保存包装入口的有限反汇编证据位于 `evidence/native-learning-*.asm`。
+这些静态证据不证明实际词频文件写入和重新加载成功，仍需真实桌面验证。
+
 ## Noble 加载边界
 
 原厂库导入 `__cxa_throw_bad_array_new_length@Qt_5`，系统 Qt5 不提供该别名。

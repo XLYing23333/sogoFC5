@@ -1,5 +1,6 @@
 #pragma once
 #include "keys.hpp"
+#include "learning.hpp"
 #include "result_buffers.hpp"
 #include "shell_view.hpp"
 #include <QCryptographicHash>
@@ -78,6 +79,8 @@ public:
         ResultBuffers::GetCore get=nullptr;
         address=imageBase_+0x410d3e;std::memcpy(&get,&address,sizeof(get));
         results_=std::make_unique<ResultBuffers>(core,get,object,assign_);
+        learning_=std::make_unique<NativeLearning>(native<NativeLearning::Factory>(0x237d60),
+            native<NativeLearning::Save>(0x10d880),native<NativeLearning::Save>(0x10d960));
         reset();
     }
     ~Vendor(){
@@ -87,6 +90,7 @@ public:
         if(library_)dlclose(library_);
     }
     Vendor(const Vendor&)=delete;Vendor& operator=(const Vendor&)=delete;
+    void saveLearning(bool sync){learning_->save(sync);}
     void reset(){view_->clear();std::memset(keyboardState_(keyboard_),0,256);}
     void begin(){results_->clear();}
     bool key(std::uint8_t vk,std::uint32_t state,bool release){
@@ -97,6 +101,10 @@ public:
     bool next(){begin();return view_->pageDown();}
     fc4::ShellView::Snapshot snapshot()const{return view_->snapshot();}
 private:
+    template<class Function> Function native(std::size_t offset)const{
+        void* address=imageBase_+offset;Function function;
+        static_assert(sizeof(function)==sizeof(address));std::memcpy(&function,&address,sizeof(function));return function;
+    }
     template<class Function> Function symbol(const char* name){
         dlerror();void* address=dlsym(library_,name);const char* error=dlerror();
         if(error||!address)throw std::runtime_error(std::string("missing vendor interface: ")+name);
@@ -108,5 +116,6 @@ private:
     unsigned char*(*keyboardState_)(void*)=nullptr;
     std::unique_ptr<fc4::ShellView> view_;
     std::unique_ptr<ResultBuffers> results_;
+    std::unique_ptr<NativeLearning> learning_;
 };
 }

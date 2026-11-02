@@ -19,7 +19,7 @@
 
 SogoFC5 adapts the official Sogou Linux **4.2.1.145** engine and dictionaries to Fcitx5. A native C++ module handles key events, preedit text and candidates, while a separate worker calls the vendor engine through reconstructed binary interfaces. The input method appears as **Sogo-FC5** in Fcitx5.
 
-The target environment is **Ubuntu 24.04 amd64 with X11 and Fcitx5 5.1.7**. The source package version is `1.0.0`. The vendor engine remains closed source; this repository supplies the Fcitx5 integration and interface definitions. Real engine conversion, application compatibility, learning-data persistence and long-running desktop behavior still require desktop verification.
+The target environment is **Ubuntu 24.04 amd64 with X11 and Fcitx5 5.1.7**. The source package version is `1.0.1`. The vendor engine remains closed source; this repository supplies the Fcitx5 integration and interface definitions. Real engine conversion, application compatibility, learning-data persistence and long-running desktop behavior still require desktop verification.
 
 > **Unofficial compatibility project:** Sogo-FC5 is not affiliated with, sponsored by or endorsed by Sogou, Tencent or the platform vendors. It is not a publication of Sogou's original source code. The public repository and releases exclude Sogou engine binaries, dictionaries and upstream installers; local builds require a separately obtained official package under its applicable terms. See [Rights and disclaimer](#rights-and-disclaimer) and [NOTICE.md](NOTICE.md).
 
@@ -32,7 +32,7 @@ Get the source archive from [Releases](https://github.com/XLYing23333/sogoFC5/re
 Obtain the matching package separately through the [official distribution channel](https://shurufa.sogou.com/linux), review its applicable terms, then build a Debian package locally using the [build instructions](#development) and install it:
 
 ```sh
-sudo apt install ./dist/sogo-FC5-v1.0.0_amd64.deb
+sudo apt install ./dist/sogo-FC5-v1.0.1_amd64.deb
 ```
 
 Log out and log back in, then add **Sogo-FC5** in Fcitx5's configuration tool. Installation does not change your input-method groups or restart Fcitx5. Logging in again is also necessary after an upgrade so that the loaded module and worker use the same protocol.
@@ -76,6 +76,8 @@ Theme switching changes Fcitx5 Classic UI's global appearance, including other i
 - **Private engine profile:** isolated configuration and learning files, restricted directory permissions and an exclusive profile lock.
 - **Content-free diagnostics:** readiness, request counts, timing summaries and fault reasons; diagnostic records omit key contents, pinyin, candidates and committed text. Vendor learning data is separate from diagnostics.
 
+Learning data is checkpointed after roughly 2 seconds idle following a commit, or roughly 30 seconds during continuous input. Normal shutdown, including termination signals, requests native synchronized saving. `sogo-fc5-direct-status --learning` reports content-free save state. A returned call is not proof of per-file durability; real learning across reboot still requires verification. See the [persistence guide (Chinese)](docs/USAGE.md#学习数据持久化).
+
 ### Data and diagnostics
 
 | Item | Location or behavior |
@@ -108,7 +110,7 @@ Place the upstream package in `vendor/packages/`, then build:
 ```sh
 sh scripts/build-deb.sh \
   vendor/packages/sogoupinyin_4.2.1.145_amd64.deb \
-  dist/sogo-FC5-v1.0.0_amd64.deb
+  dist/sogo-FC5-v1.0.1_amd64.deb
 ```
 
 If using extracted Ubuntu 24.04 Fcitx5 development files instead of system-installed development files, append `vendor/sdk/noble` as the third argument.
@@ -118,7 +120,7 @@ The script verifies hashes, extracts the upstream package without running its ma
 Create a source archive with:
 
 ```sh
-python3 tools/pack_source.py dist/sogo-FC5-v1.0.0-source.tar.gz
+python3 tools/pack_source.py dist/sogo-FC5-v1.0.1-source.tar.gz
 ```
 
 Local vendor packages, the SDK and build outputs are excluded. Python and protobuf are build/check tools, not runtime dependencies of the native module and worker.

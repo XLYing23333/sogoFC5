@@ -19,7 +19,7 @@
 
 SogoFC5 将搜狗官方 Linux **4.2.1.145** 引擎与词库适配到 Fcitx5。原生 C++ 模块处理按键、预编辑文本和候选展示，独立工作进程通过重建的二进制接口调用原厂引擎。在 Fcitx5 中，输入法显示为 **Sogo-FC5**。
 
-目标环境为 **Ubuntu 24.04 amd64、X11 和 Fcitx5 5.1.7**，源码包版本为 `1.0.0`。原厂引擎仍然闭源；本仓库提供 Fcitx5 集成与接口定义。真实引擎转换、应用兼容性、学习数据持久化和长时间桌面运行行为仍需桌面验证。
+目标环境为 **Ubuntu 24.04 amd64、X11 和 Fcitx5 5.1.7**，源码包版本为 `1.0.1`。原厂引擎仍然闭源；本仓库提供 Fcitx5 集成与接口定义。真实引擎转换、应用兼容性、学习数据持久化和长时间桌面运行行为仍需桌面验证。
 
 > **非官方兼容项目：** Sogo-FC5 与搜狗、腾讯及相关平台厂商无官方隶属、赞助或背书关系。本项目不是搜狗原始源码的公开版本。公开仓库和 Release 不包含搜狗引擎二进制、词库或官方安装包；本地构建需自行取得适用许可的官方包。详见[权利与免责声明](#权利与免责声明)及 [NOTICE.md](NOTICE.md)。
 
@@ -32,7 +32,7 @@ SogoFC5 将搜狗官方 Linux **4.2.1.145** 引擎与词库适配到 Fcitx5。�
 自行通过[官方渠道](https://shurufa.sogou.com/linux)取得匹配版本，并核对其适用许可后，按照[构建说明](#开发)在本机生成 Debian 包，再安装：
 
 ```sh
-sudo apt install ./dist/sogo-FC5-v1.0.0_amd64.deb
+sudo apt install ./dist/sogo-FC5-v1.0.1_amd64.deb
 ```
 
 注销并重新登录后，在 Fcitx5 配置工具中添加 **Sogo-FC5**。安装不会修改输入法分组或重启 Fcitx5。升级后也需要重新登录，使已加载模块与工作进程使用相同的通信协议。
@@ -76,6 +76,8 @@ sudo apt install ./dist/sogo-FC5-v1.0.0_amd64.deb
 - **私有引擎配置：** 配置与学习数据独立存放，限制目录权限，并通过独占锁保护同一份数据。
 - **不含输入内容的诊断：** 记录就绪状态、请求计数、耗时摘要与故障原因；诊断记录不包含按键内容、拼音、候选或提交文本。原厂学习数据与诊断记录分开存放。
 
+学习数据在提交后空闲约 2 秒或持续输入约 30 秒时尝试保存；正常退出执行原厂同步保存，支持正常终止信号。使用 `sogo-fc5-direct-status --learning` 查看不含输入内容的保存状态。调用返回不等于逐文件落盘成功；真实重启后的学习效果仍需验证，详见[学习数据持久化](docs/USAGE.md#学习数据持久化)。
+
 ### 数据与诊断
 
 | 项目 | 位置或行为 |
@@ -108,7 +110,7 @@ sogo-fc5-direct-status > direct-status.json
 ```sh
 sh scripts/build-deb.sh \
   vendor/packages/sogoupinyin_4.2.1.145_amd64.deb \
-  dist/sogo-FC5-v1.0.0_amd64.deb
+  dist/sogo-FC5-v1.0.1_amd64.deb
 ```
 
 若使用已解包的 Ubuntu 24.04 Fcitx5 开发文件，而非系统已安装的开发文件，可在命令末尾追加第三个参数 `vendor/sdk/noble`。
@@ -118,7 +120,7 @@ sh scripts/build-deb.sh \
 生成源码归档：
 
 ```sh
-python3 tools/pack_source.py dist/sogo-FC5-v1.0.0-source.tar.gz
+python3 tools/pack_source.py dist/sogo-FC5-v1.0.1-source.tar.gz
 ```
 
 归档不包含本地上游包、SDK 或构建产物。Python 和 protobuf 用于构建与检查，不是原生模块和工作进程的运行时依赖。
